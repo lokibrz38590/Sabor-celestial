@@ -1,0 +1,241 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #df3f3f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: white;class="container"
+    background-color:#df3f3f;
+    font-family: Arial, Helvetica, sans-serif;
+    font color="purple";
+}
+
+nav ul {
+    list-style-type: none;e
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    pading:10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    background-color: green;
+}
+/* Estilos para a seção do banner */
+.banner {
+    background-image: url("./img/gui.imagem.svd.webp");
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px 10px;
+    margin: 10px 20px:
+}
+
+.banner h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+      text-algin: centro;
+}
+
+. contêiner {
+preenchimento : 0 px  50 px ;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+     text-algin: centro;
+}
+
+.banner .btn {
+    background-color: #ff5500;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.banner .btn:hover {
+    background-color: #ff7f33;
+}
+
+/* Estilos para a seção de animes em destaque */
+.featured-anime {
+    padding: 40px 20px;
+}
+
+.featured-anime h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o rodapé */
+footer {
+     color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 20px;
+    height: 150px;
+}
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid green ;
+}
+.center {
+    text-align: center;
+}
+
+header {
+font-size: 24px;
+color: white;
+background-color:#df3f3f;
+font-family: Arial, Helvetica, sans-serif;
+}
+<h1> {
+<p style="color:#800080"></p>
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #242424;
+  overflow: hidden;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: fade 1s;
+}
+.slider .seta {
+  z-index: 10;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  width: auto;
+  height: 1.5rem;
+  font-size: 2.5em;
+  color: cornsilk;
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+.slider .seta:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.slider .arrow-left {
+  left: 2%;
+}
+.slider .arrow-right {
+  right: 2%;
+}
+.slider .paginacao {
+  position: absolute;
+  margin: auto;
+  top: auto;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  width: 7rem;
+  height: auto;
+  z-index: 5;
+}
+.slider .paginacao .botao {
+ width: auto;
+ height: auto;
+ display: inline-flex;
+ align-content: center;
+ justify-content: center;
+ color: #fff;
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+<script>
+const imgs = document.querySelectorAll(".slider img");
+const dots = document.querySelectorAll(".botao i");
+const leftArrow = document.querySelector(".arrow-left");
+const rightArrow = document.querySelector(".arrow-right");
+let currentIndex = 0;
+let time = 7000; //Tempo padrão para apresentação de slides automática
+const defClass = (startPos, index) => {
+  for (let i = startPos; i < imgs.length; i++) {
+    imgs[i].style.display = "none";
+    dots[i].classList.remove("fa-dot-circle");
+    dots[i].classList.add("fa-circle");
+  }
+  imgs[index].style.display = "block";
+  dots[index].classList.add("fa-dot-circle");
+};
+defClass(1, 0);
+leftArrow.addEventListener("click", function(){
+  currentIndex <= 0 ? currentIndex = imgs.length-1 : currentIndex--;
+  defClass(0, currentIndex);
+});
+rightArrow.addEventListener("click", function(){
+  currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+  defClass(0, currentIndex);
+});
+const startAutoSlide = () => {
+  setInterval(() => {
+    currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+    defClass(0, currentIndex);
+  }, time);
+};
+startAutoSlide(); //Inicia o slideshow
+</script>
+<div style{
+  <margin:10px;>
+  <pading:20px;>
+}    
